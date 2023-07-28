@@ -5,6 +5,8 @@
   width: 100%;
   height: auto;
   padding: 40px 60px;
+  display: grid;
+  // place-items: center;
   &__title {
     font-size: 4rem;
     font-weight: v.$bold-weight;
@@ -21,21 +23,50 @@
       height: 446px;
       position: relative;
       background-color: v.$third-color;
+      // display: grid;
       &--image-label {
         position: absolute;
         top: 20px;
         right: 20px;
       }
       &--title {
-        font-size: 2.4rem;
+        font-size: 2.6rem;
         font-weight: v.$semibold-weight;
         padding-top: 10px;
-        padding-left: 10px;
+        padding-left: 25px;
       }
       &--subtitle {
-        padding-left: 10px;
-
+        font-size: 1.6rem;
+        font-weight: v.$medium-weight;
+        color: v.$secondary-font-color;
+        padding-left: 25px;
+      }
+      &--price-container {
+        @include m.flexPosition(row, space-between, center);
+        margin-top: 25px;
+        padding: 0 25px;
+        p {
+          font-size: 2rem;
+          font-weight: v.$semibold-weight;
+        }
+        span {
+          font-size: 1.6rem;
+          font-weight: v.$regular-weight;
+          color: v.$secondary-font-color;
+          text-decoration: line-through;
+        }
       }
     }
+  }
+  &__button {
+    margin-top: 30px;
+    width: 245px;
+    height: 50px;
+    justify-self: center;
+    border: 1px solid v.$primary-button-color;
+    background-color: v.$white;
+    color: v.$primary-button-color;
+    font-size: 1.6rem;
+    font-weight: v.$semibold-weight;
   }
 }
