@@ -1,0 +1,54 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.hero-container {
+  width: 100%;
+  height: auto;
+  &__image-container {
+    width: 100%;
+    height: 720px;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__info-container {
+    width: 645px;
+    height: 445px;
+    background-color: v.$primary-color;
+    position: absolute;
+    top: 250px;
+    right: 40px;
+    padding: 60px 42.5px 40px;
+    &--label {
+      font-size: 1.6rem;
+      font-weight: v.$medium-weight;
+      letter-spacing: 2px;
+    }
+    &--title {
+      font-size: 5.2rem;
+      font-weight: v.$bold-weight;
+      line-height: 6.5rem;
+      color: v.$primary-button-color;
+      margin-bottom: 15px;
+    }
+    &--text {
+      font-size: 1.8rem;
+      font-weight: v.$medium-weight;
+      margin-bottom: 55px;
+    }
+    &--button {
+      cursor: pointer;
+      width: 220px;
+      height: 75px;
+      border: none;
+      background-color: v.$primary-button-color;
+      color: v.$primary-color;
+      font-size: 1.6rem;
+      font-weight: v.$bold-weight;
+      text-transform: uppercase;
+    }
+  }
+}
